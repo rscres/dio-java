@@ -44,6 +44,8 @@ public class SomaNumeros {
         soma.adicionarNumero(5);
         soma.adicionarNumero(20);
         soma.adicionarNumero(11);
+        soma.adicionarNumero(0);
+        soma.adicionarNumero(-7);
 
         soma.exibirNumeros();
         System.out.println("Soma: " + soma.calcularSoma());

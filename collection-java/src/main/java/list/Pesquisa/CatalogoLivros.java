@@ -22,7 +22,7 @@ public class CatalogoLivros {
             throw new RuntimeException("A lista esta vazia");
         List<Livro> livrosAchados = new Vector<Livro>();
         livros.forEach( l -> {
-                    if (l.getAutor().equals(autor))
+                    if (l.getAutor().equalsIgnoreCase(autor))
                         livrosAchados.add(l);
                 });
         return livrosAchados;
@@ -45,7 +45,7 @@ public class CatalogoLivros {
             throw new RuntimeException("A lista esta vazia");
         ListIterator<Livro> it = livros.listIterator();
         while (it.hasNext()) {
-            if (it.next().getTitulo().equals(titulo))
+            if (it.next().getTitulo().equalsIgnoreCase(titulo))
                 return it.previous();
         }
         return null;
